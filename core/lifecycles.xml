@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lifecycles>
+    <lifecycle deploydays="10" desc="Ежеквартальный релиз" enabled="no" id="major.quaterly" regular="yes" releasedays="80" shiftdays="90" type="major">
+        <phase days="7" desc="" id="a" pos="0" stage="release"/>
+        <phase days="6" desc="" id="b" pos="1" stage="release"/>
+        <phase days="7" desc="" id="c" pos="2" stage="release"/>
+        <phase days="0" desc="" id="closure" pos="0" stage="deployment"/>
+    </lifecycle>
+    <lifecycle deploydays="7" desc="Еженедельный релиз" enabled="yes" id="minor.weekly" regular="yes" releasedays="14" shiftdays="7" type="minor">
+        <phase days="7" desc="" id="coding" pos="0" stage="release"/>
+        <phase days="7" desc="" id="deploy" pos="0" stage="deployment"/>
+    </lifecycle>
+    <lifecycle deploydays="1" desc="Внеплановый срочный релиз" enabled="no" id="urgent.emergency" regular="no" releasedays="1" shiftdays="0" type="urgent"/>
+</lifecycles>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<base>
+    <category id="account" name="Account-Bound" type="account">
+        <group desc="System Settings" id="system">
+            <item desc="Add ssh key to linux account" id="ssh.addkey"/>
+        </group>
+    </category>
+    <category id="app" name="Application-Bound" type="app">
+        <group desc="" id="webserver">
+            <item desc="" id="tomcat.7"/>
+        </group>
+    </category>
+    <category id="host" name="Host-Bound" type="host"/>
+</base>
