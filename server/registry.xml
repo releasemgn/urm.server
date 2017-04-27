@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registry>
+    <resources>
+        <resource>
+            <property name="authkey" value="resource-nexus.main"/>
+            <property name="baseurl" value="https://repository.jboss.org/nexus"/>
+            <property name="desc" value="Primary Nexus Instance"/>
+            <property name="name" value="nexus.main"/>
+            <property name="type" value="nexus"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-svn.myset"/>
+            <property name="baseurl" value="http://svn.myset.space/svn"/>
+            <property name="name" value="svn.myset"/>
+            <property name="type" value="svn"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-usvn.ahuman.org"/>
+            <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
+            <property name="desc" value="aHuman svn instance"/>
+            <property name="name" value="usvn.ahuman.org"/>
+            <property name="type" value="svn"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-github.com"/>
+            <property name="baseurl" value="https://github.com/releasemgn"/>
+            <property name="desc" value="OpenSource Git Instance"/>
+            <property name="name" value="github.com"/>
+            <property name="type" value="git"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-infra2.ssh"/>
+            <property name="name" value="infra2.ssh"/>
+            <property name="type" value="ssh"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-server.ssh.key"/>
+            <property name="desc" value="urmweb key"/>
+            <property name="name" value="server.ssh.key"/>
+            <property name="type" value="ssh"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-server.ssh.main"/>
+            <property name="desc" value="Primary Server ssh Access"/>
+            <property name="name" value="server.ssh.main"/>
+            <property name="type" value="ssh"/>
+        </resource>
+    </resources>
+    <directory>
+        <system desc="test7" name="test" offline="no">
+            <product desc="test" name="test" offline="no" path="test"/>
+            <product desc="urm" name="urm" offline="no" path="urm"/>
+        </system>
+        <system desc="" name="mysystem" offline="yes">
+            <product desc="" name="myproduct" offline="yes" path="myproduct"/>
+        </system>
+    </directory>
+    <mirror>
+        <repository>
+            <property name="name" value="product-myproduct-meta"/>
+            <property name="product" value="myproduct"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-test-meta"/>
+            <property name="product" value="test"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-test-urmweb"/>
+            <property name="product" value="test"/>
+            <property name="project" value="urmweb"/>
+            <property name="repository" value="urmweb"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-urm-data"/>
+            <property name="product" value="urm"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="local-test-data"/>
+            <property name="name" value="product-test-data"/>
+            <property name="product" value="test"/>
+            <property name="repository" value="deployment"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="name" value="core"/>
+            <property name="type" value="server"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="meta-myoffice.urm"/>
+            <property name="name" value="product-urm-meta"/>
+            <property name="product" value="urm"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-myproduct-data"/>
+            <property name="product" value="myproduct"/>
+            <property name="type" value="product.data"/>
+        </repository>
+    </mirror>
+    <build>
+        <property name="register" value="no"/>
+        <builder>
+            <property name="ant.homepath" value="D:\bin\apache-ant-1.8.4"/>
+            <property name="buildertype" value="ant"/>
+            <property name="java.jdkhomepath" value="C:\Program Files\Java\jdk1.7.0_79"/>
+            <property name="name" value="ant.java7"/>
+            <property name="remote" value="no"/>
+            <property name="target.localpath" value="."/>
+            <property name="target.type" value="localpath"/>
+            <property name="version" value="1.8.4"/>
+        </builder>
+        <builder>
+            <property name="ant.homepath" value="/urm/build/apache-ant-1.9.7"/>
+            <property name="authresource" value="infra2.ssh"/>
+            <property name="buildertype" value="ant"/>
+            <property name="hostlogin" value="urmweb@infra2"/>
+            <property name="java.jdkhomepath" value="/usr/java/jdk1.7.0_75"/>
+            <property name="name" value="ant.java7.remote"/>
+            <property name="ostype" value="linux"/>
+            <property name="port" value="8122"/>
+            <property name="remote" value="yes"/>
+            <property name="target.localpath" value="."/>
+            <property name="target.type" value="localpath"/>
+            <property name="version" value="1.9.7"/>
+        </builder>
+    </build>
+</registry>
