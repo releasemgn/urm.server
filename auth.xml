@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<auth>
+    <localusers>
+        <user admin="yes" email="" fullname="" name="admin"/>
+        <user admin="no" email="dev" fullname="" name="dev"/>
+        <user admin="no" email="myuser@gmail.com" fullname="My User" name="myuser"/>
+        <user admin="no" email="" fullname="" name="rel"/>
+    </localusers>
+    <groups>
+        <group name="mygroup1">
+            <permissions anynetwork="no" anyproduct="yes" devacc="yes" infacc="no" opracc="no" relacc="no" testacc="no"/>
+        </group>
+        <group name="mygroup2">
+            <permissions anynetwork="no" anyproduct="no" devacc="no" infacc="no" opracc="yes" relacc="no" testacc="yes"/>
+        </group>
+        <group name="rel">
+            <localuser name="rel"/>
+            <permissions anynetwork="yes" anyproduct="yes" devacc="no" infacc="no" opracc="no" relacc="yes" testacc="no"/>
+        </group>
+    </groups>
+</auth>
