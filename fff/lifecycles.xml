@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<lifecycles>
+    <lifecycle deploydays="10" desc="Ежеквартальный релиз" enabled="yes" id="major.quaterly" regular="yes" releasedays="80" shiftdays="90" type="major">
+        <phase days="7" desc="Планирование релиза" id="planning" pos="0" stage="release"/>
+        <phase days="20" desc="Анализ и проектирование" id="design" pos="1" stage="release"/>
+        <phase days="30" desc="Начальная реализация" id="coding" pos="2" stage="release"/>
+        <phase days="14" desc="Стабилизация" id="stabilization" pos="3" stage="release"/>
+        <phase days="7" desc="Регрессионное и нагрузочное тестирование" id="regression" pos="4" stage="release"/>
+        <phase days="1" desc="Финализация" id="finish" pos="5" stage="release"/>
+        <phase days="2" desc="Установка" id="deploy" pos="0" stage="deployment"/>
+        <phase days="7" desc="Закрытие релиза" id="closure" pos="1" stage="deployment"/>
+    </lifecycle>
+    <lifecycle deploydays="7" desc="Еженедельный релиз" enabled="yes" id="minor.weekly" regular="yes" releasedays="14" shiftdays="7" type="minor">
+        <phase days="7" desc="Планирование и анализ" id="planning" pos="0" stage="release"/>
+        <phase days="6" desc="Разработка" id="coding" pos="1" stage="release"/>
+        <phase days="1" desc="Финализация" id="finish" pos="2" stage="release"/>
+        <phase days="1" desc="Установка релиза" id="deploy" pos="0" stage="deployment"/>
+        <phase days="6" desc="Закрытие релиза" id="closure" pos="1" stage="deployment"/>
+    </lifecycle>
+    <lifecycle deploydays="7" desc="Еженедельный релиз" enabled="no" id="minor.weekly.new" regular="yes" releasedays="14" shiftdays="7" type="minor">
+        <phase days="-1" desc="Планирование и анализ" id="planning" pos="0" stage="release"/>
+        <phase days="6" desc="Разработка" id="coding" pos="1" stage="release"/>
+        <phase days="1" desc="Финализация" id="finish" pos="2" stage="release"/>
+        <phase days="1" desc="Установка релиза" id="deploy" pos="0" stage="deployment"/>
+        <phase days="6" desc="Закрытие релиза" id="closure" pos="1" stage="deployment"/>
+    </lifecycle>
+    <lifecycle deploydays="1" desc="Срочный внеплановый релиз" enabled="yes" id="urgent.emergency" regular="no" releasedays="1" shiftdays="0" type="urgent">
+        <phase days="1" desc="Выпуск" id="release" pos="0" stage="release"/>
+        <phase days="1" desc="Установка" id="deploy" pos="0" stage="deployment"/>
+    </lifecycle>
+</lifecycles>
