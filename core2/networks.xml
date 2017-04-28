@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<infrastructure>
+    <datacenter desc="" id="BAZIZ">
+        <network desc="" id="LOCALIT" mask="192.168.0.0/16">
+            <host desc="" id="lb2" ip="" ostype="windows" port="0"/>
+            <host desc="" id="lb1" ip="" ostype="windows" port="0"/>
+        </network>
+    </datacenter>
+    <datacenter desc="" id="VOSHOD">
+        <network desc="" id="MAIN" mask="192.168.0.0/16">
+            <host desc="" id="infra2" ip="192.168.1.1" ostype="linux" port="22">
+                <account admin="no" id="urmweb" resource="infra2.ssh"/>
+            </host>
+        </network>
+    </datacenter>
+</infrastructure>
