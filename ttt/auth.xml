@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<auth>
+    <localusers>
+        <user admin="yes" email="" fullname="" name="admin"/>
+        <user admin="no" email="" fullname="" name="dev"/>
+        <user admin="no" email="" fullname="" name="opr"/>
+        <user admin="no" email="" fullname="" name="rel"/>
+        <user admin="yes" email="" fullname="" name="test"/>
+    </localusers>
+    <groups>
+        <group name="devs">
+            <localuser name="dev"/>
+            <permissions anynetwork="no" anyproduct="no" devacc="yes" infacc="no" opracc="no" relacc="no">
+                <product name="myoffice.post"/>
+                <network name="DEVINFRA"/>
+                <network name="DEVMOP"/>
+            </permissions>
+        </group>
+        <group name="itops">
+            <localuser name="dev"/>
+            <permissions anynetwork="no" anyproduct="no" devacc="no" infacc="no" opracc="yes" relacc="no">
+                <product name="myit"/>
+                <network name="DEVINFRA"/>
+            </permissions>
+        </group>
+        <group name="opr">
+            <localuser name="opr"/>
+            <permissions anynetwork="no" anyproduct="yes" devacc="no" infacc="no" opracc="yes" relacc="no">
+                <network name="PRODMOP"/>
+                <special name="special.baseitems"/>
+                <special name="special.baseadm"/>
+            </permissions>
+        </group>
+        <group name="rels">
+            <localuser name="rel"/>
+            <permissions anynetwork="yes" anyproduct="yes" devacc="no" infacc="no" opracc="no" relacc="yes">
+                <special name="special.baseadm"/>
+                <special name="special.baseitems"/>
+            </permissions>
+        </group>
+    </groups>
+</auth>

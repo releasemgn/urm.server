@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<infrastructure>
+    <datacenter desc="" id="BAZIZ">
+        <network desc="" id="LOCALIT" mask="178.57.79.0/32">
+            <host desc="" id="myhost" ip="192.168.0.1" ostype="linux" port="0">
+                <account admin="yes" id="root" resource="infra.ssh.key"/>
+                <account admin="no" id="urmweb" resource="infra.ssh.key"/>
+            </host>
+        </network>
+    </datacenter>
+    <datacenter desc="Инфраструктура ДИТ Москвы" id="MSKDIT">
+        <network desc="ДИТ - для продукта Мой Офис Почта" id="PRODMOP" mask="10.89.90.128/25">
+            <host desc="lb node 1 / EPS-LB-1" id="lb1.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="db node 3 / EPS-DB-S-1" id="db3.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="lb node 2 / EPS-LB-2" id="lb2.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="swift node 2 / EPS-DS-SWIFT2" id="st2.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="gw node2 / EPS-GW-2" id="gw2.nct.local" ip="" ostype="linux" port="22"/>
+            <host desc="sso node 1 / EPS-SSO-1" id="sso1.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="swift node 3 / EPS-DS-SWIFT3" id="st3.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="sso node 2 / EPS-SSO-2" id="sso2.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="ds node 3 / EPS-DS-3" id="ds3.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="swift node 1 / EPS-DS-SWIFT1" id="st1.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="gw node1 / EPS-GW-1" id="gw1.nct.local" ip="" ostype="linux" port="22"/>
+            <host desc="db node 2 / EPS-DB-2" id="db2.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="db node 1 / EPS-DB-1" id="db1.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="ds node 2 / EPS-DS-2" id="ds2.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+            <host desc="ds node 1 / EPS-DS-1" id="ds1.nct.local" ip="" ostype="linux" port="22">
+                <account admin="yes" id="root" resource=""/>
+            </host>
+        </network>
+    </datacenter>
+    <datacenter desc="Инфраструктура НИИ Восход" id="VOSHOD">
+        <network desc="Инфраструктура" id="DEVINFRA" mask="10.80.3.0/24">
+            <host desc="ИТ-инфраструктура" id="infra1" ip="10.80.3.2" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="infra.ssh.key"/>
+            </host>
+            <host desc="Инфраструктура поддержки сред" id="infra2" ip="10.80.3.3" ostype="linux" port="8122">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+                <account admin="no" id="urmweb" resource="infra.ssh.urmweb"/>
+            </host>
+            <host desc="" id="localhost" ip="127.0.0.1" ostype="linux" port="22">
+                <account admin="no" id="urmweb" resource="infra.ssh.urmweb"/>
+            </host>
+        </network>
+        <network desc="Восход - для продукта Мой Офис Почта" id="DEVMOP" mask="10.80.3.0/24">
+            <host desc="MS Exchange" id="mse1.box.local" ip="10.80.3.10" ostype="windows" port="22">
+                <account admin="yes" id="Administrator" resource=""/>
+            </host>
+            <host desc="MOP be/fe role node 1" id="be1.box.local" ip="10.80.3.7" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP db/ms role node 2" id="db2.box.local" ip="10.80.3.9" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP lb/dd role node 1" id="lb1.box.local" ip="10.80.3.5" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+                <account admin="no" id="urmtest" resource="server.ssh.key"/>
+            </host>
+            <host desc="MOP db/ms role node 1" id="db1.box.local" ip="10.80.3.8" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP lb/dd role node 2" id="lb2.box.local" ip="10.80.3.6" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+                <account admin="no" id="urmtest" resource="server.ssh.key"/>
+            </host>
+            <host desc="MOP be/fe role node 2" id="be2.box.local" ip="10.80.3.13" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP st role node 1" id="st1.box.local" ip="10.80.3.11" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP st role node 2" id="st2.box.local" ip="10.80.3.12" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+            <host desc="MOP sso role node 1" id="sso1.box.local" ip="10.80.3.4" ostype="linux" port="22">
+                <account admin="yes" id="root" resource="server.ssh.main"/>
+            </host>
+        </network>
+    </datacenter>
+</infrastructure>
