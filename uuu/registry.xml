@@ -10,10 +10,12 @@
             <property name="verified" value="yes"/>
         </resource>
         <resource>
-            <property name="authkey" value="resource-svn.myset"/>
-            <property name="baseurl" value="http://svn.myset.space/svn"/>
-            <property name="name" value="svn.myset"/>
-            <property name="type" value="svn"/>
+            <property name="authkey" value="resource-github.com"/>
+            <property name="baseurl" value="https://github.com"/>
+            <property name="desc" value="OpenSource Git Instance"/>
+            <property name="name" value="github.com"/>
+            <property name="type" value="git"/>
+            <property name="verified" value="no"/>
         </resource>
         <resource>
             <property name="authkey" value="resource-usvn.ahuman.org"/>
@@ -24,12 +26,10 @@
             <property name="verified" value="yes"/>
         </resource>
         <resource>
-            <property name="authkey" value="resource-github.com"/>
-            <property name="baseurl" value="https://github.com"/>
-            <property name="desc" value="OpenSource Git Instance"/>
-            <property name="name" value="github.com"/>
-            <property name="type" value="git"/>
-            <property name="verified" value="no"/>
+            <property name="authkey" value="resource-svn.myset"/>
+            <property name="baseurl" value="http://svn.myset.space/svn"/>
+            <property name="name" value="svn.myset"/>
+            <property name="type" value="svn"/>
         </resource>
         <resource>
             <property name="authkey" value="resource-infra2.ssh"/>
@@ -61,16 +61,6 @@
     </directory>
     <mirror>
         <repository>
-            <property name="name" value="product-myproduct-meta"/>
-            <property name="product" value="myproduct"/>
-            <property name="type" value="product.meta"/>
-        </repository>
-        <repository>
-            <property name="name" value="product-test-meta"/>
-            <property name="product" value="test"/>
-            <property name="type" value="product.meta"/>
-        </repository>
-        <repository>
             <property name="branch" value="prod"/>
             <property name="name" value="project-test-urmweb"/>
             <property name="product" value="test"/>
@@ -78,6 +68,20 @@
             <property name="repository" value="urmweb"/>
             <property name="resource" value="usvn.ahuman.org"/>
             <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-test-meta"/>
+            <property name="product" value="test"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="test7"/>
+            <property name="name" value="product-myproduct-meta"/>
+            <property name="product" value="myproduct"/>
+            <property name="repository" value="deployment"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
         </repository>
         <repository>
             <property name="name" value="product-urm-data"/>
@@ -94,7 +98,11 @@
             <property name="type" value="product.data"/>
         </repository>
         <repository>
+            <property name="datapath" value="uuu"/>
             <property name="name" value="core"/>
+            <property name="repository" value="urm.server"/>
+            <property name="resource" value="github.com"/>
+            <property name="rootpath" value="releasemgn"/>
             <property name="type" value="server"/>
         </repository>
         <repository>
