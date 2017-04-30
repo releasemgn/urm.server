@@ -154,22 +154,17 @@
             <property name="type" value="project"/>
         </repository>
         <repository>
-            <property name="branch" value="prod"/>
-            <property name="name" value="project-myoffice.urm-urm"/>
-            <property name="product" value="myoffice.urm"/>
-            <property name="project" value="urm"/>
-            <property name="repository" value="urm"/>
-            <property name="resource" value="usvn.ahuman.org"/>
-            <property name="type" value="project"/>
-        </repository>
-        <repository>
+            <property name="datapath" value="server.test"/>
             <property name="name" value="core"/>
+            <property name="repository" value="urm.server"/>
+            <property name="resource" value="github.com"/>
+            <property name="rootpath" value="/"/>
             <property name="type" value="server"/>
         </repository>
         <repository>
             <property name="branch" value="prod"/>
-            <property name="name" value="project-urm-urm"/>
-            <property name="product" value="urm"/>
+            <property name="name" value="project-myoffice.urm-urm"/>
+            <property name="product" value="myoffice.urm"/>
             <property name="project" value="urm"/>
             <property name="repository" value="urm"/>
             <property name="resource" value="usvn.ahuman.org"/>
@@ -185,17 +180,26 @@
             <property name="type" value="project"/>
         </repository>
         <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-urm-urm"/>
+            <property name="product" value="urm"/>
+            <property name="project" value="urm"/>
+            <property name="repository" value="urm"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-pgu-meta"/>
+            <property name="product" value="pgu"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
             <property name="datapath" value="meta-myoffice.post"/>
             <property name="name" value="product-myoffice.post-meta"/>
             <property name="product" value="myoffice.post"/>
             <property name="repository" value="dit"/>
             <property name="resource" value="usvn.ahuman.org"/>
             <property name="rootpath" value="/"/>
-            <property name="type" value="product.meta"/>
-        </repository>
-        <repository>
-            <property name="name" value="product-pgu-meta"/>
-            <property name="product" value="pgu"/>
             <property name="type" value="product.meta"/>
         </repository>
         <repository>
