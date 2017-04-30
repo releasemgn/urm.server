@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registry>
+    <resources>
+        <resource>
+            <property name="authkey" value="resource-nexus.main"/>
+            <property name="baseurl" value="http://mynexus.local"/>
+            <property name="desc" value="Primary Nexus Instance"/>
+            <property name="name" value="nexus.main"/>
+            <property name="type" value="nexus"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-github.com"/>
+            <property name="baseurl" value="https://github.com"/>
+            <property name="desc" value="OpenSource Git Instance"/>
+            <property name="name" value="github.com"/>
+            <property name="type" value="git"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-usvn.ahuman.org"/>
+            <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
+            <property name="desc" value="aHuman svn instance"/>
+            <property name="name" value="usvn.ahuman.org"/>
+            <property name="type" value="svn"/>
+        </resource>
+    </resources>
+    <directory>
+        <system desc="My System Description" name="mysystem">
+            <product desc="My Product" name="myproduct" path="myproduct"/>
+        </system>
+    </directory>
+    <mirror>
+        <repository>
+            <property name="datapath" value="urm.server"/>
+            <property name="name" value="core"/>
+            <property name="repository" value="deployment"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="server"/>
+        </repository>
+    </mirror>
+    <build/>
+</registry>

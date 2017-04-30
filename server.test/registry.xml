@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registry>
+    <resources>
+        <resource>
+            <property name="authkey" value="resource-svnrepo"/>
+            <property name="baseurl" value="http://svn.myset.space/svn"/>
+            <property name="name" value="svnrepo"/>
+            <property name="type" value="svn"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-nexus.main"/>
+            <property name="baseurl" value="https://repository.jboss.org/nexus"/>
+            <property name="desc" value="Primary Nexus Instance"/>
+            <property name="name" value="nexus.main"/>
+            <property name="type" value="nexus"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-infra.ssh.key"/>
+            <property name="desc" value="infra2 root key"/>
+            <property name="name" value="infra.ssh.key"/>
+            <property name="type" value="ssh"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-usvn.ahuman.org"/>
+            <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
+            <property name="desc" value="aHuman svn instance"/>
+            <property name="name" value="usvn.ahuman.org"/>
+            <property name="type" value="svn"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-github.com"/>
+            <property name="baseurl" value="https://github.com/releasemgn"/>
+            <property name="desc" value="OpenSource Git Instance"/>
+            <property name="name" value="github.com"/>
+            <property name="type" value="git"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-server.ssh.key"/>
+            <property name="desc" value="urmweb key"/>
+            <property name="name" value="server.ssh.key"/>
+            <property name="type" value="ssh"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-infra.ssh.urmweb"/>
+            <property name="desc" value="infra2 urmweb password"/>
+            <property name="name" value="infra.ssh.urmweb"/>
+            <property name="type" value="ssh"/>
+            <property name="verified" value="no"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-server.ssh.main"/>
+            <property name="desc" value="Primary Server ssh Access"/>
+            <property name="name" value="server.ssh.main"/>
+            <property name="type" value="ssh"/>
+            <property name="verified" value="yes"/>
+        </resource>
+    </resources>
+    <directory>
+        <system desc="Электронное правительство" name="egov" offline="yes">
+            <product desc="Портал госуслуг" name="pgu" offline="yes" path="pgu"/>
+        </system>
+        <system desc="Мой Офис" name="myoffice" offline="no">
+            <product desc="Мой Офис - Почта" name="myoffice.post" offline="no" path="myoffice.post"/>
+            <product desc="Мой Офис - Управление Инфраструктурой" name="myoffice.urm" offline="no" path="myoffice.urm"/>
+        </system>
+        <system desc="Система для демонстрации" name="mysystem" offline="no">
+            <product desc="ИТ-сервисы" name="myit" offline="yes" path="myit"/>
+            <product desc="Продукт для демонстрации" name="myproduct" offline="no" path="myproduct"/>
+            <product desc="Управление релизами" name="urm" offline="no" path="urm"/>
+        </system>
+    </directory>
+    <mirror>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-myoffice.urm-urmweb"/>
+            <property name="product" value="myoffice.urm"/>
+            <property name="project" value="urmweb"/>
+            <property name="repository" value="urmweb"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-myoffice.post-data"/>
+            <property name="product" value="myoffice.post"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-myit-meta"/>
+            <property name="product" value="myit"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="meta-urm"/>
+            <property name="name" value="product-urm-meta"/>
+            <property name="product" value="urm"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="data-myproduct"/>
+            <property name="name" value="product-myproduct-data"/>
+            <property name="product" value="myproduct"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="meta-myproduct"/>
+            <property name="name" value="product-myproduct-meta"/>
+            <property name="product" value="myproduct"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="meta-myoffice.urm"/>
+            <property name="name" value="product-myoffice.urm-meta"/>
+            <property name="product" value="myoffice.urm"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-myit-data"/>
+            <property name="product" value="myit"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-urm-data"/>
+            <property name="product" value="urm"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-pgu-data"/>
+            <property name="product" value="pgu"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-urm-urmweb"/>
+            <property name="product" value="urm"/>
+            <property name="project" value="urmweb"/>
+            <property name="repository" value="urmweb"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-myoffice.urm-urm"/>
+            <property name="product" value="myoffice.urm"/>
+            <property name="project" value="urm"/>
+            <property name="repository" value="urm"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="name" value="core"/>
+            <property name="type" value="server"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-urm-urm"/>
+            <property name="product" value="urm"/>
+            <property name="project" value="urm"/>
+            <property name="repository" value="urm"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-myproduct-test"/>
+            <property name="product" value="myproduct"/>
+            <property name="project" value="test"/>
+            <property name="repository" value="urm.server"/>
+            <property name="resource" value="github.com"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="meta-myoffice.post"/>
+            <property name="name" value="product-myoffice.post-meta"/>
+            <property name="product" value="myoffice.post"/>
+            <property name="repository" value="dit"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-pgu-meta"/>
+            <property name="product" value="pgu"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="name" value="product-myoffice.urm-data"/>
+            <property name="product" value="myoffice.urm"/>
+            <property name="type" value="product.data"/>
+        </repository>
+    </mirror>
+    <build>
+        <property name="register" value="no"/>
+        <builder>
+            <property name="ant.homepath" value="/urm/build/apache-ant-1.9.7"/>
+            <property name="buildertype" value="ant"/>
+            <property name="desc" value="Сборка java 7 при помощи ant"/>
+            <property name="java.jdkhomepath" value="/usr/java/jdk1.7.0_75"/>
+            <property name="name" value="ant.java7"/>
+            <property name="remote" value="no"/>
+            <property name="target.localpath" value="."/>
+            <property name="target.type" value="localpath"/>
+            <property name="version" value="1.9.7"/>
+        </builder>
+        <builder>
+            <property name="buildertype" value="generic"/>
+            <property name="generic.command" value="ant"/>
+            <property name="name" value="ant.generic"/>
+            <property name="remote" value="no"/>
+            <property name="target.localpath" value="."/>
+            <property name="target.type" value="localpath"/>
+        </builder>
+    </build>
+</registry>
