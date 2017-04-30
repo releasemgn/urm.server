@@ -22,19 +22,19 @@
             <property name="type" value="ssh"/>
         </resource>
         <resource>
-            <property name="authkey" value="resource-usvn.ahuman.org"/>
-            <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
-            <property name="desc" value="aHuman svn instance"/>
-            <property name="name" value="usvn.ahuman.org"/>
-            <property name="type" value="svn"/>
-            <property name="verified" value="yes"/>
-        </resource>
-        <resource>
             <property name="authkey" value="resource-github.com"/>
             <property name="baseurl" value="https://github.com/releasemgn"/>
             <property name="desc" value="OpenSource Git Instance"/>
             <property name="name" value="github.com"/>
             <property name="type" value="git"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-usvn.ahuman.org"/>
+            <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
+            <property name="desc" value="aHuman svn instance"/>
+            <property name="name" value="usvn.ahuman.org"/>
+            <property name="type" value="svn"/>
             <property name="verified" value="yes"/>
         </resource>
         <resource>
@@ -89,8 +89,12 @@
             <property name="type" value="product.data"/>
         </repository>
         <repository>
+            <property name="datapath" value="myit.test"/>
             <property name="name" value="product-myit-meta"/>
             <property name="product" value="myit"/>
+            <property name="repository" value="urm.server"/>
+            <property name="resource" value="github.com"/>
+            <property name="rootpath" value="/"/>
             <property name="type" value="product.meta"/>
         </repository>
         <repository>
