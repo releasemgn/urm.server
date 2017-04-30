@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<monitoring>
+    <property name="data.path" value="@urm.installpath@/monitoring/data/@product@"/>
+    <property name="logs.path" value="@urm.installpath@/logs/monitoring/@product@"/>
+    <property name="monitoring.enabled" value="no"/>
+    <property name="reports.path" value="@urm.installpath@/monitoring/reports/@product@"/>
+    <property name="resources.path" value="@urm.installpath@/monitoring/resources/@product@"/>
+    <property name="resources.url" value="http://urmdit-dev.space/monitoring/@product@"/>
+    <scope/>
+</monitoring>

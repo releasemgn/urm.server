@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<version>
+    <property name="major.first" value="1"/>
+    <property name="major.last" value="0"/>
+    <property name="next.major.first" value="1"/>
+    <property name="next.major.last" value="1"/>
+    <property name="prod.lasttag" value="1"/>
+    <property name="prod.nexttag" value="2"/>
+</version>

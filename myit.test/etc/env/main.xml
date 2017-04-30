@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environment envtype="production" id="main">
+    <segment datacenter="VOSHOD" desc="Основные сервисы" name="main">
+        <deployment/>
+        <startorder/>
+        <server accesstype="docker" desc="Confluence Database" name="confdb" offline="no" ostype="linux" runtype="database" sysname="conf-db"/>
+        <server accesstype="docker" desc="JIRA" name="jira" offline="no" ostype="linux" runtype="webui" sysname="jira-web"/>
+        <server accesstype="docker" desc="JIRA Database" name="jiradb" offline="no" ostype="linux" runtype="database" sysname="jira-db"/>
+        <server accesstype="docker" desc="Wiki portal" name="conf" offline="no" ostype="linux" runtype="webui" sysname="conf-web"/>
+    </segment>
+</environment>
