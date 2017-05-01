@@ -22,19 +22,19 @@
             <property name="type" value="ssh"/>
         </resource>
         <resource>
-            <property name="authkey" value="resource-github.com"/>
-            <property name="baseurl" value="https://github.com/releasemgn"/>
-            <property name="desc" value="OpenSource Git Instance"/>
-            <property name="name" value="github.com"/>
-            <property name="type" value="git"/>
-            <property name="verified" value="yes"/>
-        </resource>
-        <resource>
             <property name="authkey" value="resource-usvn.ahuman.org"/>
             <property name="baseurl" value="http://usvn.ahuman.org/svn"/>
             <property name="desc" value="aHuman svn instance"/>
             <property name="name" value="usvn.ahuman.org"/>
             <property name="type" value="svn"/>
+            <property name="verified" value="yes"/>
+        </resource>
+        <resource>
+            <property name="authkey" value="resource-github.com"/>
+            <property name="baseurl" value="https://github.com/releasemgn"/>
+            <property name="desc" value="OpenSource Git Instance"/>
+            <property name="name" value="github.com"/>
+            <property name="type" value="git"/>
             <property name="verified" value="yes"/>
         </resource>
         <resource>
@@ -61,7 +61,7 @@
     </resources>
     <directory>
         <system desc="Электронное правительство" name="egov" offline="yes">
-            <product desc="Портал госуслуг" name="pgu" offline="yes" path="pgu"/>
+            <product desc="Федеральный сегмент ПГУ" name="fedpgu" offline="yes" path="fedpgu"/>
         </system>
         <system desc="Мой Офис" name="myoffice" offline="no">
             <product desc="Мой Офис - Почта" name="myoffice.post" offline="no" path="myoffice.post"/>
@@ -89,6 +89,11 @@
             <property name="type" value="product.data"/>
         </repository>
         <repository>
+            <property name="name" value="product-fedpgu-data"/>
+            <property name="product" value="fedpgu"/>
+            <property name="type" value="product.data"/>
+        </repository>
+        <repository>
             <property name="datapath" value="myit.test"/>
             <property name="name" value="product-myit-meta"/>
             <property name="product" value="myit"/>
@@ -101,7 +106,7 @@
             <property name="datapath" value="meta-urm"/>
             <property name="name" value="product-urm-meta"/>
             <property name="product" value="urm"/>
-            <property name="repository" value="dit"/>
+            <property name="repository" value="deployment"/>
             <property name="resource" value="usvn.ahuman.org"/>
             <property name="rootpath" value="/"/>
             <property name="type" value="product.meta"/>
@@ -125,10 +130,19 @@
             <property name="type" value="product.meta"/>
         </repository>
         <repository>
-            <property name="datapath" value="meta-myoffice.urm"/>
+            <property name="datapath" value="meta-fedpgu"/>
+            <property name="name" value="product-fedpgu-meta"/>
+            <property name="product" value="fedpgu"/>
+            <property name="repository" value="deployment"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
+            <property name="type" value="product.meta"/>
+        </repository>
+        <repository>
+            <property name="datapath" value="test.meta-myoffice.urm"/>
             <property name="name" value="product-myoffice.urm-meta"/>
             <property name="product" value="myoffice.urm"/>
-            <property name="repository" value="dit"/>
+            <property name="repository" value="deployment"/>
             <property name="resource" value="usvn.ahuman.org"/>
             <property name="rootpath" value="/"/>
             <property name="type" value="product.meta"/>
@@ -139,13 +153,12 @@
             <property name="type" value="product.data"/>
         </repository>
         <repository>
+            <property name="datapath" value="data-urm"/>
             <property name="name" value="product-urm-data"/>
             <property name="product" value="urm"/>
-            <property name="type" value="product.data"/>
-        </repository>
-        <repository>
-            <property name="name" value="product-pgu-data"/>
-            <property name="product" value="pgu"/>
+            <property name="repository" value="deployment"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="rootpath" value="/"/>
             <property name="type" value="product.data"/>
         </repository>
         <repository>
@@ -154,6 +167,15 @@
             <property name="product" value="urm"/>
             <property name="project" value="urmweb"/>
             <property name="repository" value="urmweb"/>
+            <property name="resource" value="usvn.ahuman.org"/>
+            <property name="type" value="project"/>
+        </repository>
+        <repository>
+            <property name="branch" value="prod"/>
+            <property name="name" value="project-myoffice.urm-urm"/>
+            <property name="product" value="myoffice.urm"/>
+            <property name="project" value="urm"/>
+            <property name="repository" value="urm"/>
             <property name="resource" value="usvn.ahuman.org"/>
             <property name="type" value="project"/>
         </repository>
@@ -167,8 +189,8 @@
         </repository>
         <repository>
             <property name="branch" value="prod"/>
-            <property name="name" value="project-myoffice.urm-urm"/>
-            <property name="product" value="myoffice.urm"/>
+            <property name="name" value="project-urm-urm"/>
+            <property name="product" value="urm"/>
             <property name="project" value="urm"/>
             <property name="repository" value="urm"/>
             <property name="resource" value="usvn.ahuman.org"/>
@@ -182,20 +204,6 @@
             <property name="repository" value="urm.server"/>
             <property name="resource" value="github.com"/>
             <property name="type" value="project"/>
-        </repository>
-        <repository>
-            <property name="branch" value="prod"/>
-            <property name="name" value="project-urm-urm"/>
-            <property name="product" value="urm"/>
-            <property name="project" value="urm"/>
-            <property name="repository" value="urm"/>
-            <property name="resource" value="usvn.ahuman.org"/>
-            <property name="type" value="project"/>
-        </repository>
-        <repository>
-            <property name="name" value="product-pgu-meta"/>
-            <property name="product" value="pgu"/>
-            <property name="type" value="product.meta"/>
         </repository>
         <repository>
             <property name="datapath" value="meta-myoffice.post"/>

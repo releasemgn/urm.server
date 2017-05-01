@@ -50,17 +50,17 @@
             <property name="release.nextminor" value="@release.lastmajor@.@prod.nexttag@"/>
             <property name="release.repo" value="releases"/>
             <property name="release.resource" value="svn.main"/>
-            <mode name="branch">
+            <mode name="majorbranch">
                 <property name="build.artefacts" value="@super@/releases"/>
-                <property name="release.version" value="@release.nextminor@"/>
+                <property name="release.version" value="@release.nextmajor@"/>
             </mode>
             <mode name="trunk">
                 <property name="build.artefacts" value="@super@/releases"/>
                 <property name="release.version" value="@release.nextmajor@"/>
             </mode>
-            <mode name="majorbranch">
+            <mode name="branch">
                 <property name="build.artefacts" value="@super@/releases"/>
-                <property name="release.version" value="@release.nextmajor@"/>
+                <property name="release.version" value="@release.nextminor@"/>
             </mode>
             <mode name="devtrunk">
                 <property name="app.version" value="@release.nextmajor@"/>
